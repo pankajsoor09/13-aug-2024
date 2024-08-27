@@ -1,0 +1,15 @@
+1. Write a program which take source file and destination file as input as command line arguments. It copies the source file contents to destination file. 
+ If source file does not exist, it should give appropriate message to use.  If destination  file does not exist, it should be created.  If it exists, program should ask that, “whether you want to overwrite?(Yes/No”. 
+
+On the basis of user choice, appropriate action should be taken.  
+
+2. Write a program which will accept an input String from user 
+
+Write the input in the file io.txt
+Show size of the file
+Read contents from the  file  and display them on console
+Delete io.txt file using File class
+
+
+
+file.getTotalSpace() and file.length() Both methods return values in bytes, and the values are of type long

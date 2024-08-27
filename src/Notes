@@ -1,0 +1,62 @@
+static block -- it is used to Initialize the static data member of class and it is executed only once even before the main method
+
+
+init block -- initialized block is used to Initialize instance member of the class.it executed when you created object of class .even before the constructor is executed
+
+
+Input / output in java.io
+    
+  --byte stream                                     --Character stream are two category of io   
+ -input Stream (Read)   -output stream(Write)         -Reader              -writer   // this four are abstract classes
+ *File InputStream       *File o Stream                *File Reader          *File writer// file work on single character at a time
+ *Buffered Input Stream  *Buffered O Stream            *Buffered Reader      *Buffered Writer// in buffer we can work on bunch of character at a time(buffer = temp storage)
+ *Data Input Stream      *Data O  S                    *Input S  Reader      *Output S Writer
+ *Object Input Stream    *Object O S                                         *Print Writer
+                         *Print Stream  
+                         
+Bridge classes(Input Stream reader and output Stream Writer work as a bridge)  are used to convert byte stream data to character stream
+Data Input Stream and Data Output Stream are used to read write primitive specific data   respectively
+
+read method will return you -1 in case of end of file      
+
+if  using dataoutputstream to write data then for reading that need to use datainputstream then need to call appropriate methods in the same Sequence in which you are writing the program
+
+**objectInputStream-- Reading object |  objectOutputStream -- writing the object in java.io
+
+WriteObject(Object obj): to write object |obj is super class of all class
+when we are writing any object serialization will happens
+serialization is a process of converting state of object(data members) into byte stream
+serializable <I>: java.io  (Marker interface)| not abstract
+
+object readObject()
+when you read object de-serialization will happen
+De-Serialization is the process of converting state of object from byte stream to character stream
+
+FileReader : reading data from file
+FileWriter writing data into file
+
+user innput:  system.in
+
+system .out.println:
+system : in bulit in java.lang
+
+out : static data member of system class which object of outputstream (printStream ) and it internally represents
+      standard output device i.e console
+println : method of Printstream class      
+
+java.lang
+public class system{
+      public static PrintStream out;// 
+      public static PrintStream err;//print in red 
+      public static InputStream in;
+    }
+    
+  user Input  :
+  
+  system.in :
+  in : static data member of system class which object of Inputstream  and it internally represents
+      standard input device i.e keyboard
+      
+  InputStreamReader : is used to convert byte stream data into character stream//will work on single character at a time
+   BuffererReader : used to work on bunch of cahracter at a time instead of working on single character at a time    
+  
